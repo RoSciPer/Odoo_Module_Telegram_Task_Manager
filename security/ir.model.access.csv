@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_telegram_config,access_telegram_config,model_telegram_config,base.group_user,1,1,1,1
+access_telegram_user,access_telegram_user,model_telegram_user,base.group_user,1,1,1,1
+access_telegram_bot,access_telegram_bot,model_telegram_bot,base.group_user,1,1,1,1
+access_task_vehicle,access_task_vehicle,model_task_vehicle,base.group_user,1,1,1,1
+access_task_manager,access_task_manager,model_task_manager,base.group_user,1,1,1,1
+access_task_category,access_task_category,model_task_category,base.group_user,1,1,1,1
+access_task_tag,access_task_tag,model_task_tag,base.group_user,1,1,1,1
+access_task_comment,access_task_comment,model_task_comment,base.group_user,1,1,1,1
+access_task_report,access_task_report,model_task_report,base.group_user,1,1,1,1
+access_telegram_service,access_telegram_service,model_telegram_service,base.group_user,1,1,1,1
+access_quick_task_wizard,access_quick_task_wizard,model_quick_task_wizard,base.group_user,1,1,1,1
+access_privacy_log,access_privacy_log,model_privacy_log,base.group_user,1,1,1,1

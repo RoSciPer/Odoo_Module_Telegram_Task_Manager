@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vehicle Form -->
+    <record id="view_task_vehicle_form" model="ir.ui.view">
+        <field name="name">task.vehicle.form</field>
+        <field name="model">task.vehicle</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="license_plate"/>
+                        <field name="driver_name"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vehicle List -->
+    <record id="view_task_vehicle_list" model="ir.ui.view">
+        <field name="name">task.vehicle.list</field>
+        <field name="model">task.vehicle</field>
+        <field name="arch" type="xml">
+            <list string="Vehicles">
+                <field name="name"/>
+                <field name="license_plate"/>
+                <field name="driver_name"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_task_vehicle" model="ir.actions.act_window">
+        <field name="name">Vehicles</field>
+        <field name="res_model">task.vehicle</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

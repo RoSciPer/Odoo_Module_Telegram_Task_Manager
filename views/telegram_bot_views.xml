@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Task Report Form -->
+    <record id="view_task_report_form" model="ir.ui.view">
+        <field name="name">task.report.form</field>
+        <field name="model">task.report</field>
+        <field name="arch" type="xml">
+            <form string="Task Report">
+                <header>
+                    <button name="action_resolve" type="object" string="Resolve" class="oe_highlight" invisible="state in ['resolved', 'closed']"/>
+                    <button name="action_close" type="object" string="Close" invisible="state == 'closed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,in_review,resolved,closed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="telegram_user_id"/>
+                        <field name="create_date"/>
+                    </group>
+                    <group>
+                        <field name="description"/>
+                        <field name="admin_response"/>
+                        <field name="photo_urls"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Task Report List -->
+    <record id="view_task_report_list" model="ir.ui.view">
+        <field name="name">task.report.list</field>
+        <field name="model">task.report</field>
+        <field name="arch" type="xml">
+            <list string="Task Reports">
+                <field name="name"/>
+                <field name="telegram_user_id"/>
+                <field name="state"/>
+                <field name="create_date"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_task_report" model="ir.actions.act_window">
+        <field name="name">Task Reports</field>
+        <field name="res_model">task.report</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Telegram Service Form -->
+    <record id="view_telegram_service_form" model="ir.ui.view">
+        <field name="name">telegram.service.form</field>
+        <field name="model">telegram.service</field>
+        <field name="arch" type="xml">
+            <form string="Telegram Service">
+                <header>
+                    <button name="start_service" type="object" string="🚀 Start Service" class="oe_highlight" invisible="is_running"/>
+                    <button name="stop_service" type="object" string="⛔ Stop Service" class="btn-danger" invisible="not is_running"/>
+                    <field name="is_running" widget="boolean_button" readonly="1"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="bot_token" password="True"/>
+                            <field name="admin_telegram_id"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                    <div class="alert alert-info" role="alert">
+                        <strong>📋 Setup Instructions:</strong><br/>
+                        1. Create bot with @BotFather in Telegram<br/>
+                        2. Enter Bot Token and Admin Telegram ID<br/>
+                        3. Click "Start Service"<br/>
+                        4. Send /start to your bot in Telegram
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Telegram Service List -->
+    <record id="view_telegram_service_list" model="ir.ui.view">
+        <field name="name">telegram.service.list</field>
+        <field name="model">telegram.service</field>
+        <field name="arch" type="xml">
+            <list string="Telegram Services">
+                <field name="name"/>
+                <field name="is_running"/>
+                <field name="last_update_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Service Action -->
+    <record id="action_telegram_service" model="ir.actions.act_window">
+        <field name="name">Telegram Service</field>
+        <field name="res_model">telegram.service</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

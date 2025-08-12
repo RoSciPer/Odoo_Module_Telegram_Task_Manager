@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Telegram Notification Wizard Form -->
+    <record id="view_telegram_notify_wizard_form" model="ir.ui.view">
+        <field name="name">telegram.notify.wizard.form</field>
+        <field name="model">telegram.notify.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Send Telegram Notification">
+                <group>
+                    <field name="send_to_all"/>
+                    <field name="user_ids" widget="many2many_tags" options="{'no_create': True}" invisible="send_to_all"/>
+                    <field name="notification_type"/>
+                </group>
+                <group string="Message">
+                    <field name="message" nolabel="1" placeholder="Enter your message here..."/>
+                </group>
+                <footer>
+                    <button name="action_send_notification" type="object" string="Send Notification" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Telegram Notification Wizard Action -->
+    <record id="action_telegram_notify_wizard" model="ir.actions.act_window">
+        <field name="name">Send Telegram Notification</field>
+        <field name="res_model">telegram.notify.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_telegram_config,access_telegram_config,model_telegram_config,base.group_user,1,1,1,1
+access_telegram_user,access_telegram_user,model_telegram_user,base.group_user,1,1,1,1
+access_vehicle_vehicle,access_vehicle_vehicle,model_vehicle_vehicle,base.group_user,1,1,1,1
+access_task_task,access_task_task,model_task_task,base.group_user,1,1,1,1

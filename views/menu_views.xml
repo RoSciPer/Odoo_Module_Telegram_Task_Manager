@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_task_manager_root" 
+              name="Task Manager" 
+              web_icon="fa-tasks"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_telegram_config" 
+              name="Configuration" 
+              parent="menu_task_manager_root" 
+              action="action_telegram_config" 
+              sequence="10"/>
+
+    <!-- Bot Management -->
+    <menuitem id="menu_telegram_bot" 
+              name="Telegram Service" 
+              parent="menu_task_manager_root" 
+              action="action_telegram_service" 
+              sequence="15"/>
+
+    <!-- Users -->
+    <menuitem id="menu_users" 
+              name="Users" 
+              parent="menu_task_manager_root" 
+              action="action_telegram_user" 
+              sequence="20"/>
+
+    <!-- Vehicles -->
+    <menuitem id="menu_vehicles" 
+              name="Vehicles" 
+              parent="menu_task_manager_root" 
+              action="action_task_vehicle" 
+              sequence="30"/>
+
+    <!-- Tasks -->
+    <menuitem id="menu_tasks" 
+              name="Tasks" 
+              parent="menu_task_manager_root" 
+              action="action_task_manager" 
+              sequence="40"/>
+
+    <!-- Reports -->
+    <menuitem id="menu_reports" 
+              name="Reports" 
+              parent="menu_task_manager_root" 
+              action="action_task_report" 
+              sequence="50"/>
+</odoo>
