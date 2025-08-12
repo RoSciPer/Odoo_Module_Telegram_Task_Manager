@@ -1,4 +1,4 @@
-cat > README.md << 'EOF'
+>>>>>>> f35b33a (Update README and add static files)
 # Odoo Telegram Task Manager
 
 A custom Odoo module that integrates with Telegram to manage tasks directly from the chat interface.  
