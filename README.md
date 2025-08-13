@@ -15,6 +15,8 @@ Users can receive, update, and complete tasks without leaving Telegram, while al
 
 ### Configuration
 ![Config](static/description/Config.png)
+
+### Admin panel in TG
 ![Admin Telegram](static/description/admin_telegram.png)
 
 ### Users and Vehicles
@@ -34,6 +36,7 @@ Users can receive, update, and complete tasks without leaving Telegram, while al
 2. Restart the Odoo server:
    ```bash
    python odoo-bin -d <your_database> --addons-path=../addons,addons --dev=all
+
 
 
 
