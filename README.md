@@ -1,4 +1,4 @@
->>>>>>> f35b33a (Update README and add static files)
+
 # Odoo Telegram Task Manager
 
 A custom Odoo module that integrates with Telegram to manage tasks directly from the chat interface.  
@@ -34,3 +34,4 @@ Users can receive, update, and complete tasks without leaving Telegram, while al
 2. Restart the Odoo server:
    ```bash
    python odoo-bin -d <your_database> --addons-path=../addons,addons --dev=all
+
