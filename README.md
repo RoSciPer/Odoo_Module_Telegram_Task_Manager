@@ -15,24 +15,25 @@ Users can receive, update, and complete tasks without leaving Telegram, while al
 
 ### Configuration
 ![Config](static/description/Config.png)
-![Admin Telegram](admin_telegram.png)
+![Admin Telegram](static/description/admin_telegram.png)
 
 ### Users and Vehicles
-![Users](Users.png)
-![Vehicles](Vehicles.png)
+![Users](static/description/Users.png)
+![Vehicles](static/description/Vehicles.png)
 
 ### Tasks
-![User Telegram](userTg.png)
-![User Task](user_task.png)
-![Task Completed](task_complited.png)
+![User Telegram](static/description/userTg.png)
+![User Task](static/description/user_task.png)
+![Task Completed](static/description/task_complited.png)
 
 ### Reports
-![Photo Reports](Photo_repotrs.png)
+![Photo Reports](static/description/Photo_repotrs.png)
 
 ## Installation
 1. Copy the module folder into your Odoo `addons` directory.
 2. Restart the Odoo server:
    ```bash
    python odoo-bin -d <your_database> --addons-path=../addons,addons --dev=all
+
 
 
